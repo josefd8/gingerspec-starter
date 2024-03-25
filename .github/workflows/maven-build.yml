@@ -11,31 +11,33 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Setting up JDK 11
-      uses: joschi/setup-jdk@v2
+      uses: actions/setup-java@v4
       with:
-        java-version: '11'
-        distribution: 'adopt'
-    - name: Cache local Maven repository
-      uses: actions/cache@v2
+        java-version: 11
+        distribution: 'temurin'
+        cache: maven
+
+    - name: Set up Maven
+      uses: stCarolas/setup-maven@v5
       with:
-        path: ~/.m2/repository
-        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-        restore-keys: |
-            ${{ runner.os }}-maven-
+        maven-version: 3.8.2
+
     - name: Build with Maven
       run: mvn install -Dmaven.test.skip=true
+
     - name: Update local archetype catalog
       run: mvn archetype:update-local-catalog && mvn archetype:crawl
+
     - name: Generating a new project based on local archetype and performing a dry-run
       run: |
         mkdir test
         cd test/
-        yes | mvn archetype:generate -DarchetypeCatalog=local -DarchetypeGroupId=com.github.privaliatech -DarchetypeArtifactId=gingerspec-starter -DgroupId=eu.vptech -Dversion=1.0-SNAPSHOT -DartifactId=myproject
+        yes | mvn archetype:generate -DarchetypeCatalog=local -DarchetypeGroupId=com.github.josefd8 -DarchetypeArtifactId=gingerspec-starter -DgroupId=com.mydomain -Dversion=1.0-SNAPSHOT -DartifactId=myproject
         cd myproject/
         mvn verify -Dcucumber.execution.dry-run=true
 
