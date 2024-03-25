@@ -2,23 +2,23 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.privaliatech</groupId>
+    <groupId>com.github.josefd8</groupId>
     <artifactId>gingerspec-starter</artifactId>
-    <version>1.21</version>
+    <version>1.22</version>
 
     <name>Archetype - gingerspec-starter</name>
     <description>A maven archetype for creating new automation projects based on gingerspec library.</description>
-    <url>https://github.com/PrivaliaTech/gingerspec-starter</url>
+    <url>https://github.com/josefd8/gingerspec-starter</url>
     <packaging>jar</packaging>
 
     <scm>
-        <connection>scm:git:https://github.com/PrivaliaTech/gingerspec-starter.git</connection>
-        <url>https://github.com/PrivaliaTech/gingerspec-starter</url>
+        <connection>scm:git:https://github.com/josefd8/gingerspec-starter.git</connection>
+        <url>https://github.com/josefd8/gingerspec-starter</url>
     </scm>
 
     <organization>
-        <name>Veepee</name>
-        <url>https://www.veepee.com/</url>
+        <name>josefd8</name>
+        <url>https://github.com/josefd8/gingerspec-starter</url>
     </organization>
 
     <licenses>
@@ -52,7 +52,7 @@
     <distributionManagement>
         <site>
             <id>api.wiki</id>
-            <url>https://github.com/PrivaliaTech/gingerspec/blob/master/README.md</url>
+            <url>https://github.com/josefd8/gingerspec-starter/blob/master/README.md</url>
         </site>
 
         <snapshotRepository>
