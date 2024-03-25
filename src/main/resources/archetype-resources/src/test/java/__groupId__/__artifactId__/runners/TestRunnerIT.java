@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
  * https://testng.org/doc/
  *
  * For more info on how to run your TestNG tests directly in Intellij IDEA check:
- * https://github.com/veepee-oss/gingerspec/wiki/Setting-up-your-IDE#running-testng-test
+ * https://github.com/josefd8/gingerspec/wiki/Setting-up-your-IDE#running-testng-test
  */
 public class TestRunnerIT {
 

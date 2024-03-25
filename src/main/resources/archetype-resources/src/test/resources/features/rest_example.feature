@@ -4,9 +4,9 @@ Feature: Testing a RestFull API example
   This is an example of how to use the provided Rest steps of GingerSpec to test an API. This example
   uses https://jsonplaceholder.typicode.com, Fake Online REST API for Testing and Prototyping
 
-  Steps documentation  -> https://github.com/veepee-oss/gingerspec/wiki/Gherkin-steps#rest-steps
+  Steps documentation  -> https://github.com/josefd8/gingerspec/wiki/Gherkin-steps#rest-steps
   Run this in terminal -> mvn verify -Dcucumber.filter.tags="@rest"
-  Run in IntellijIDEA  -> https://github.com/veepee-oss/gingerspec/wiki/Setting-up-your-IDE#running-cucumber-test
+  Run in IntellijIDEA  -> https://github.com/josefd8/gingerspec/wiki/Setting-up-your-IDE#running-cucumber-test
 
   Scenario: Check a successful response with a valid body is returned
     Given I securely send requests to 'jsonplaceholder.typicode.com:443'

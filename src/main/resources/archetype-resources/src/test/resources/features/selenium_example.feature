@@ -4,9 +4,9 @@ Feature: Testing basic functionality of a web page
   This is an example of how to use the provided Selenium steps of GingerSpec to perform actions on a web page. This
   example uses https://testpages.herokuapp.com, a fake online web page for testing
 
-  Steps documentation  -> https://github.com/veepee-oss/gingerspec/wiki/Gherkin-steps#selenium-steps
+  Steps documentation  -> https://github.com/josefd8/gingerspec/wiki/Gherkin-steps#selenium-steps
   Run this in terminal -> mvn verify -Dcucumber.filter.tags="@web"
-  Run in IntellijIDEA  -> https://github.com/veepee-oss/gingerspec/wiki/Setting-up-your-IDE#running-cucumber-test
+  Run in IntellijIDEA  -> https://github.com/josefd8/gingerspec/wiki/Setting-up-your-IDE#running-cucumber-test
 
   Scenario: Fill the form and click the submit button
     Given I go to 'https://testpages.herokuapp.com/styled/basic-html-form-test.html'

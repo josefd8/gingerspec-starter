@@ -1,18 +1,18 @@
 GingerSpec starter
 =============================
 
-[![gingerspec-starter pipeline](https://github.com/veepee-oss/gingerspec-starter/actions/workflows/maven-build.yml/badge.svg)](https://github.com/veepee-oss/gingerspec-starter/actions/workflows/maven-build.yml)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.privaliatech/gingerspec-starter/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.privaliatech/gingerspec-starter)
-![GitHub Release Date](https://img.shields.io/github/release-date/PrivaliaTech/gingerspec-starter)
+[![gingerspec-starter pipeline](https://github.com/josefd8/gingerspec-starter/actions/workflows/maven-build.yml/badge.svg)](https://github.com/josefd8/gingerspec-starter/actions/workflows/maven-build.yml)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.josefd8/gingerspec-starter/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.josefd8/gingerspec-starter)
+![GitHub Release Date](https://img.shields.io/github/release-date/josefd8/gingerspec-starter)
 [![License](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 
 A maven archetype for creating new automation projects.
 
-When creating new automation projects that make use of the gingerspec library (https://github.com/PrivaliaTech/gingerspec), you can use this maven archetype to rapidly bootstrap a simple project layout, with all dependencies pre-configured and ready to use. The layout also provides code examples on how to use the library, making it easy to create your own tests
+When creating new automation projects that make use of the gingerspec library (https://github.com/josefd8/gingerspec), you can use this maven archetype to rapidly bootstrap a simple project layout, with all dependencies pre-configured and ready to use. The layout also provides code examples on how to use the library, making it easy to create your own tests
 
 This archetype makes use of **maven-archetype-archetype**, a maven archetype for creating archetypes
 ``` bash
-$ mvn archetype:generate -B -DarchetypeArtifactId=maven-archetype-archetype -DgroupId=com.github.privaliatech -DartifactId=gingerspec-starter -Dpackage=package
+$ mvn archetype:generate -B -DarchetypeArtifactId=maven-archetype-archetype -DgroupId=com.github.josefd8 -DartifactId=gingerspec-starter -Dpackage=package
 ```
 
 # How to use this maven archetype
@@ -23,9 +23,9 @@ To bootstrap a new template, execute the following command in your terminal (cha
 
 ``` bash
 mvn archetype:generate \
-  -DarchetypeGroupId=com.github.privaliatech \
+  -DarchetypeGroupId=com.github.josefd8 \
   -DarchetypeArtifactId=gingerspec-starter \
-  -DgroupId=eu.vptech \
+  -DgroupId=com.mydomain \
   -Dversion=1.0-SNAPSHOT \
   -DartifactId=myproject
 ```
@@ -39,7 +39,7 @@ mvn archetype:generate \
 If for any reason you are unable to access this archetype (or you want to make changes to this archetype configuration), you can download the project and build it in your local machine:
 
 ``` bash
-$ git clone git@github.com:veepee-oss/gingerspec-starter.git
+$ git clone git@github.com:josefd8/gingerspec-starter.git
 $ cd gingerspec-starter
 $ mvn install
 $ mvn archetype:update-local-catalog
@@ -47,7 +47,7 @@ $ mvn archetype:crawl
 ```
 This will update the local archetype repository (~/.m2/repository/archetype-catalog.xml) with this new archetype. You can now execute the following command
 
-    $ mvn archetype:generate -DarchetypeCatalog=local -DarchetypeGroupId=com.github.privaliatech -DarchetypeArtifactId=gingerspec-starter -DarchetypeVersion=<version-in-pom>
+    $ mvn archetype:generate -DarchetypeCatalog=local -DarchetypeGroupId=com.github.josefd8 -DarchetypeArtifactId=gingerspec-starter -DarchetypeVersion=<version-in-pom>
 
 Follow the on-screen instructions and provide the properties **artifactId**, **groupId** , **version** and  **package**
 
@@ -76,7 +76,7 @@ The properties are used in the same way:
 
 For example, using 
 
- - groupId=com.privalia 
+ - groupId=com.mydomain 
  - artifactId=myproject  
  - version=1.0-SNAPSHOT
  - package=mypackage
@@ -91,7 +91,7 @@ pom.xml
   
 Properties are changed in the specified places
 
-      <groupId>com.privalia</groupId>
+      <groupId>com.mydomain</groupId>
       <artifactId>myproject</artifactId>
       <version>1.0-SNAPSHOT</version>
       <packaging>jar</packaging>
@@ -115,7 +115,7 @@ Directories/packages names are changed accordingly, from this:
 To this
 
 ``` bash
-└── com.privalia
+└── com.mydomain
         ├──myproject
         │   └── CucumberRunnerIT.java
         ├── glue

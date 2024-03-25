@@ -4,8 +4,8 @@
 
 
   <properties>
-    <!-- Check the latest version of gingerspec in: https://mvnrepository.com/artifact/com.github.privaliatech/gingerspec -->
-    <privalia.gingerspec.version>2.2.16</privalia.gingerspec.version>
+    <!-- Check the latest version of gingerspec in: https://mvnrepository.com/artifact/com.github.josefd8/gingerspec -->
+    <josefd8.gingerspec.version>2.2.17</josefd8.gingerspec.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
@@ -97,9 +97,9 @@
 
   <dependencies>
     <dependency>
-      <groupId>com.github.privaliatech</groupId>
+      <groupId>com.github.josefd8</groupId>
       <artifactId>gingerspec</artifactId>
-      <version>${privalia.gingerspec.version}</version>
+      <version>${josefd8.gingerspec.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
